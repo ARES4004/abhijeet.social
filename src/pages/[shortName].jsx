@@ -11,7 +11,7 @@ export default function Project({ project }) {
   return (
     <>
       <Head>
-        <title>{project.title} - Akshay Kumar</title>
+        <title>{project.title} - Abhijeet Kumar</title>
         <meta name="description" content={project.description} />
       </Head>
       <article className="py-16 lg:py-36">

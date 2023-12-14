@@ -3,16 +3,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import { AudioPlayer } from '@/components/player/AudioPlayer'
-import posterImage from '@/images/profile.jpg'
+// import { AudioPlayer } from '@/components/player/AudioPlayer'
+import posterImage from '@/images/profile.jpeg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faGithub,
-//   faInstagram,
-//   faInstagramSquare,
+  //   faInstagram,
+  //   faInstagramSquare,
   faLinkedin,
-  faMediumM,
-//   faYoutube,
+  // faMediumM,
+  //   faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
 
 function random(length, min, max, seed = 1) {
@@ -99,9 +99,9 @@ function AboutSection(props) {
         {/* On this page, I&apos;ll skim over some of my endeavours, occasionally
         deep diving into the process behind the deeds, without actually getting
         the full story. */}
-        I&apos;m a big fan of the open source community but ironically I find it
-        really difficult sharing things that I&apos;ve done. <br />I really love
-        to sing whenever I get the chance.
+        I&apos;m a big fan of F1 and love karting. <br />I used to be a
+        professional cricketer.
+        <br />I really love to sing whenever I get the chance.
         <br /> Currently living in Konohagakure. 🍜 <br />
         Occassionaly visit Northumbria too ⚔️
       </p>
@@ -126,7 +126,7 @@ export function Layout({ children }) {
           <span className="font-mono text-slate-500">Created by</span>
           <span className="mt-6 flex font-bold text-slate-900">
             <span className="after:mt-6 after:text-slate-400">
-              Akshay Kumar
+              Abhijeet Kumar
             </span>
             {/* <span className="mt-6">Wes Mantooth</span> */}
           </span>
@@ -178,7 +178,7 @@ export function Layout({ children }) {
               <li className="flex">
                 <a
                   className="group flex items-center"
-                  href="https://www.linkedin.com/in/akshay-nm/"
+                  href="https://www.linkedin.com/in/abhijeet-ares/"
                   target="_blank"
                   rel="noreferrer noopenner"
                 >
@@ -190,7 +190,7 @@ export function Layout({ children }) {
               <li className="flex">
                 <a
                   className="group flex items-center"
-                  href="https://github.com/akshay-nm"
+                  href="https://github.com/ARES4004"
                   target="_blank"
                   rel="noreferrer noopenner"
                 >
@@ -223,7 +223,7 @@ export function Layout({ children }) {
                   <span className="hidden sm:ml-3 sm:block">Instagram</span>
                 </a>
               </li>*/}
-              <li className="flex">
+              {/* <li className="flex">
                 <a
                   className="group flex items-center"
                   href="https://akshay-nm.medium.com/"
@@ -234,7 +234,7 @@ export function Layout({ children }) {
                   <span className="sr-only sm:hidden">Medium</span>
                   <span className="hidden sm:ml-3 sm:block">Medium</span>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </section>
         </div>
@@ -258,7 +258,7 @@ export function Layout({ children }) {
           </h2>
           <div className="mt-2 flex text-sm font-bold leading-7 text-slate-900">
             <span className="after:ml-6 after:text-slate-400">
-              Akshay Kumar
+              Abhijeet Kumar
             </span>
           </div>
         </div>
