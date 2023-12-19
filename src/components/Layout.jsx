@@ -2,6 +2,7 @@ import { useId, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
+import { motion } from 'framer-motion'
 
 // import { AudioPlayer } from '@/components/player/AudioPlayer'
 import posterImage from '@/images/profile.jpeg'
@@ -101,7 +102,7 @@ function AboutSection(props) {
         the full story. */}
         I&apos;m a big fan of F1 and love karting. <br />I used to be a
         professional cricketer.
-        <br />I really love to sing whenever I get the chance.
+        <br />I really love to travel whenever I get the chance.
         <br /> Currently living in Konohagakure. 🍜 <br />
         Occassionaly visit Northumbria too ⚔️
       </p>
@@ -118,15 +119,31 @@ function AboutSection(props) {
   )
 }
 
+const AnimatedLink = ({ isActive = false, href, children }) => {
+  return (
+    <Link href={href}>
+      <span className="inline-flex flex-col">
+        <span>{children}</span>
+        <motion.span className="h-[2px] bg-black"></motion.span>
+      </span>
+    </Link>
+  )
+}
+
 export function Layout({ children }) {
   return (
     <>
       <div className="bg-slate-50 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120">
         <div className="hidden lg:sticky lg:top-0 lg:flex lg:w-16 lg:flex-none lg:items-center lg:whitespace-nowrap lg:py-12 lg:text-sm lg:leading-7 lg:[writing-mode:vertical-rl]">
           <span className="font-mono text-slate-500">Created by</span>
-          <span className="mt-6 flex font-bold text-slate-900">
+          <span className="mt-6 flex items-center font-bold text-slate-900">
             <span className="after:mt-6 after:text-slate-400">
               Abhijeet Kumar
+            </span>
+
+            <span className="inline-flex gap-x-4 text-xs">
+              <Link href="/">Projects</Link>
+              <Link href="/memories">Memories</Link>
             </span>
             {/* <span className="mt-6">Wes Mantooth</span> */}
           </span>
@@ -261,6 +278,11 @@ export function Layout({ children }) {
               Abhijeet Kumar
             </span>
           </div>
+        </div>
+
+        <div>
+          <Link href="/">Projects</Link>
+          <Link href="/memories">Memories</Link>
         </div>
       </div>
       {/* <div className="fixed inset-x-0 right-0 bottom-0 z-10 rounded-lg lg:left-112 xl:left-120">

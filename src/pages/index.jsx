@@ -13,12 +13,11 @@ export default function Home({ projects }) {
       </Head>
       <div className="pt-16 pb-12 sm:pb-4 lg:pt-12">
         <Container>
-          <h1 className="text-2xl font-bold leading-7 text-slate-900">
-            Projects
-          </h1>
-          <h1 className="text-2xl font-bold leading-7 text-slate-900">
-            Memories
-          </h1>
+          <button>
+            <h1 className="text-2xl font-bold leading-7 text-slate-900">
+              Projects
+            </h1>
+          </button>
         </Container>
         <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
           {projects.map((project) => (
