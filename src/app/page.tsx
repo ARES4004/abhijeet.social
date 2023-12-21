@@ -282,7 +282,7 @@ const projects: ProjectType[] = [
   },
   {
     id: 2,
-    date: 'April, 2020',
+    date: 'May, 2020',
     shortName: 'disaster-relief-idea',
     type: 'social welfare',
     title: 'Nivedan',
