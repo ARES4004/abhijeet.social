@@ -264,7 +264,7 @@ function Photos() {
 const projects: ProjectType[] = [
   {
     id: 1,
-    date: 'October 26, 2022',
+    date: 'October, 2022',
     shortName: 'POS system for restaurants',
     type: 'service',
     title: 'Bharpet',
@@ -282,9 +282,9 @@ const projects: ProjectType[] = [
   },
   {
     id: 2,
-    date: 'April 26, 2020',
+    date: 'April, 2020',
     shortName: 'disaster-relief-idea',
-    type: 'personal',
+    type: 'social welfare',
     title: 'Nivedan',
     description:
       'We all witnessed the mess caused by COVID. A lot of people were not able to ensure even the basic needs of their family. I created an application for people stuck in disasters. Through Nivedan (meaning request) application a user could request aid from people nearby and could see a list of help requests nearby and respond aptly.',
@@ -295,7 +295,7 @@ const projects: ProjectType[] = [
   {
     id: 3,
     shortName: 'county-sports',
-    date: 'May 24, 2020',
+    date: 'Nov, 2022',
     type: 'service',
     title: 'County Sports',
     description:
@@ -307,7 +307,7 @@ const projects: ProjectType[] = [
   {
     id: 4,
     shortName: 'binness',
-    date: 'December 24, 2021',
+    date: 'May, 2023',
     type: 'service',
     title: 'Binness',
     description:
@@ -319,9 +319,9 @@ const projects: ProjectType[] = [
   {
     id: 5,
     shortName: 'An AR/VR streaming platform',
-    date: 'March 14, 2023',
-    type: 'service',
-    title: 'F1',
+    date: 'March, 2023',
+    type: 'personal',
+    title: 'AR streaming platform (under construction)',
     description:
       'A cutting-edge platform dedicated to streaming sports content in augmented reality (AR) and virtual reality (VR), offering an immersive and interactive viewing experience for sports enthusiasts.',
 
@@ -332,7 +332,7 @@ const projects: ProjectType[] = [
   {
     id: 6,
     shortName: 'Holygrain',
-    date: 'February 14, 2023',
+    date: 'February, 2023',
     type: 'service',
     title: 'Holygrain',
     description:

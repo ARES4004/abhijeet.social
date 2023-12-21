@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       'Abhijeet Kumar - Software designer, founder, and amateur astronaut',
   },
   description:
-    'I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.',
+    'I’m Abhijeet, a web developer for Ninana Tech currently in Gujarat. I’m a state level cricketer and an ardent F1 fan.',
 }
 
 export default function RootLayout({
