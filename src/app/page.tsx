@@ -373,10 +373,19 @@ const Project = ({ project }: { project: ProjectType }) => {
       {/* {project.shortName} */}
       {/* </div> */}
       <div className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-        {project.type}
+        <div className="text-xl font-bold  text-zinc-600 dark:text-zinc-400">
+          Type
+        </div>
+        <div className="text-base text-zinc-600 dark:text-zinc-400 ">
+          {project.type}
+        </div>
       </div>
+
       <div className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-        {project.technologies}
+        <div className="text-xl font-bold">Tech</div>
+        {project.technologies.map((tech, i) => (
+          <li key={i}>{tech}</li>
+        ))}
       </div>
     </div>
   )
