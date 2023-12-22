@@ -311,7 +311,7 @@ const projects: ProjectType[] = [
     type: 'service',
     title: 'Binness',
     description:
-      'A web application designed to streamline bill creation for milkmen, vegetable sellers, and other small business owners, providing a user-friendly platform for efficient invoicing',
+      'A web application designed to streamline bill creation for milkmen, vegetable sellers, and other small business owners, providing a user-friendly platform for efficient invoicing.',
 
     technologies: ['react', 'typescript'],
     links: [],
@@ -336,7 +336,7 @@ const projects: ProjectType[] = [
     type: 'service',
     title: 'Holygrain',
     description:
-      'Go-to solution for seamless and health-conscious meal planning and delivery. It combines convenience and wellness, offering a diverse array of nutritious meal options tailored to your dietary preferences and fitness goals',
+      'Go-to solution for seamless and health-conscious meal planning and delivery. It combines convenience and wellness, offering a diverse array of nutritious meal options tailored to your dietary preferences and fitness goals.',
 
     technologies: ['next.js', 'express.js', 'node.js', 'AWS', 'MongoDB'],
     links: [],
