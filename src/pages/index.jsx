@@ -1,77 +1,39 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import { Nav } from '@/components/Nav'
+import { Hero } from '@/components/Hero'
+import { Ninana } from '@/components/Ninana'
+import { Before } from '@/components/Before'
+import { Personality } from '@/components/Personality'
+import { Contact } from '@/components/Contact'
 
-import { Container } from '@/components/Container'
-import { projects } from '@/data'
-
-export default function Home({ projects }) {
+export default function Home() {
   return (
     <>
       <Head>
-        <title>Abhijeet Kumar - My scribe</title>
-        <meta name="description" content="Abhijeet Kumar ke kaarnaame" />
+        <title>Abhijeet Kumar — Cofounder & CEO, Ninana Technologies</title>
+        <meta
+          name="description"
+          content="Cofounder & CEO of Ninana Technologies. Building software for the companies that build India."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Abhijeet Kumar — Cofounder & CEO, Ninana Technologies" />
+        <meta property="og:description" content="Building software for the companies that build India — construction, visualisation and project intelligence." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://abhijeet.social" />
+        <meta property="og:image" content="https://abhijeet.social/api/og" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Abhijeet Kumar — Cofounder & CEO, Ninana Technologies" />
+        <meta name="twitter:description" content="Building software for the companies that build India." />
+        <meta name="twitter:image" content="https://abhijeet.social/api/og" />
       </Head>
-      <div className="pt-16 pb-12 sm:pb-4 lg:pt-12">
-        <Container>
-          <button>
-            <h1 className="text-2xl font-bold leading-7 text-slate-900">
-              Projects
-            </h1>
-          </button>
-        </Container>
-        <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
-          {projects.map((project) => (
-            <ProjectEntry key={project.id} project={project} />
-          ))}
-        </div>
-      </div>
+      <Nav />
+      <main>
+        <Hero />
+        <Ninana />
+        <Before />
+        <Personality />
+        <Contact />
+      </main>
     </>
   )
-}
-
-function ProjectEntry({ project }) {
-  return (
-    <article
-      aria-labelledby={`project-${project.id}-title`}
-      className="py-10 sm:py-12"
-    >
-      <Container>
-        <div className="flex flex-col items-start">
-          <h2
-            id={`project-${project.id}-title`}
-            className="mt-2 text-lg font-bold text-slate-900"
-          >
-            <Link href={`/${project.shortName}`}>
-              <a>{project.title}</a>
-            </Link>
-          </h2>
-          <time
-            dateTime={project.date}
-            className="-order-1 font-mono text-sm leading-7 text-slate-500"
-          >
-            {project.date}
-          </time>
-          <p className="mt-1 text-base leading-7 text-slate-700">
-            {project.description}
-          </p>
-          <div className="mt-4 flex items-center gap-4">
-            <Link href={`/${project.shortName}`}>
-              <a className="flex items-center text-sm font-bold leading-6 text-teal-500 hover:text-teal-700 active:text-teal-900">
-                Show notes
-              </a>
-            </Link>
-          </div>
-        </div>
-      </Container>
-    </article>
-  )
-}
-
-export async function getStaticProps() {
-  return {
-    props: {
-      projects: projects,
-    },
-    revalidate: 10,
-  }
 }

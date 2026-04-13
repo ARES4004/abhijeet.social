@@ -1,19 +1,24 @@
-import { AudioProvider } from '@/components/AudioProvider'
-import { Layout } from '@/components/Layout'
-
 import '@/styles/tailwind.css'
-import 'focus-visible'
+import { Inter, Instrument_Serif } from 'next/font/google'
 
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
+const sans = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+const serif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: '400',
+  style: ['normal', 'italic'],
+  variable: '--font-serif',
+  display: 'swap',
+})
 
 export default function App({ Component, pageProps }) {
   return (
-    <AudioProvider>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </AudioProvider>
+    <div className={`${sans.variable} ${serif.variable} font-sans`}>
+      <Component {...pageProps} />
+    </div>
   )
 }
